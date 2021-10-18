@@ -8,7 +8,7 @@ print "$v[0]\n";
 if($v[0] < 500000)
 {
         print "less than 500000";
-        $cmd = "/etc/rc.d/init.d/mysqld restart;/etc/rc.d/init.d/httpd restart";
+        $cmd = "service mysqld restart; service httpd restart";
         system("bash -c '$cmd'");
 }
 else
